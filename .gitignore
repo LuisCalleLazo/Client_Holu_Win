@@ -1,0 +1,56 @@
+# Visual Studio Files
+.vscode/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build Folders
+bin/
+obj/
+Debug/
+Release/
+
+# Package Folders
+packages/
+*.nupkg
+*.snupkg
+*.nuspec
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Rider Files
+.idea/
+*.sln.iml
+
+# OS-Specific Files
+.DS_Store
+Thumbs.db
+
+# Logs and Temporary Files
+*.log
+*.tmp
+
+# Dependency Directories
+node_modules/
+jspm_packages/
+
+# Configurations
+appsettings*.json
+*.ps1
+*.cmd
+
+# Generated Files
+Generated_Code/
+*.g.cs
+*.g.i.cs
+
+# Git-specific Files
+!.gitignore
+!.gitattributes
+
+
+# Environmenrs
+.env

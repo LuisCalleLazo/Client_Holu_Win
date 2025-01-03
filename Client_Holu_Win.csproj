@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="src\Aplication\DTOs\" />
+    <Folder Include="src\Aplication\Interfaces\" />
+    <Folder Include="src\Aplication\UseCases\" />
+    <Folder Include="src\Domain\Entities\" />
+    <Folder Include="src\Domain\DomainEvents\" />
+    <Folder Include="src\Domain\BusinessRules\" />
+    <Folder Include="src\Infraestructure\Persistance\" />
+    <Folder Include="src\Infraestructure\Services\" />
+    <Folder Include="src\Presentation\Controllers\" />
+    <Folder Include="src\Presentation\Resources\" />
+    <Folder Include="src\Presentation\ViewModels\" />
+    <Folder Include="tests\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetEnv" Version="3.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="WebSocketSharp" Version="1.0.3-rc11" />
+  </ItemGroup>
+
+</Project>
