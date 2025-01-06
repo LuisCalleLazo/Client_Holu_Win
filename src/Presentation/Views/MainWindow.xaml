@@ -29,6 +29,8 @@
                     Click="JoinButton_Click"/>
             <Button x:Name="DeleteButton" Content="Delete Game" Width="200" Margin="0,5,0,5" 
                     Click="DeleteButton_Click"/>
+            <Button x:Name="InitWarcraft" Content="Iniciar Warcraft" Width="200" Margin="0,5,0,5" 
+                    Click="InitWarcraft_Click"/>
         </StackPanel>
     </Grid>
 </Window>

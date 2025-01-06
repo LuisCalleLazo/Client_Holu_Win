@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -61,6 +62,24 @@ public partial class MainWindow : Window
         else
         {
             MessageBox.Show("Please select a game to delete.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
+    }
+
+    private void InitWarcraft_Click(object sender, RoutedEventArgs e)
+    {
+        // Ruta al ejecutable de Warcraft III
+        string warcraftPath = @"C:\Warcraft III\Frozen Throne.exe";
+        ProcessStartInfo startInfo = new ProcessStartInfo(warcraftPath);
+        startInfo.Arguments = ""; // Aquí puedes agregar argumentos si es necesario
+
+        try
+        {
+            Process.Start(startInfo);
+            Console.WriteLine("Warcraft III iniciado.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al iniciar Warcraft III: {ex.Message}");
         }
     }
 }
