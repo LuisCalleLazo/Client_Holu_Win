@@ -17,7 +17,6 @@
     <Folder Include="src\Domain\BusinessRules\" />
     <Folder Include="src\Infraestructure\Persistance\" />
     <Folder Include="src\Infraestructure\Services\" />
-    <Folder Include="src\Presentation\Controllers\" />
     <Folder Include="src\Presentation\Resources\" />
     <Folder Include="src\Presentation\ViewModels\" />
     <Folder Include="tests\" />
@@ -26,6 +25,8 @@
   <ItemGroup>
     <PackageReference Include="DotNetEnv" Version="3.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="PacketDotNet" Version="1.4.7" />
+    <PackageReference Include="SharpPcap" Version="6.3.0" />
     <PackageReference Include="WebSocketSharp" Version="1.0.3-rc11" />
   </ItemGroup>
 

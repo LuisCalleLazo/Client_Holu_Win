@@ -1,0 +1,56 @@
+﻿<Page x:Class="Client_Holu_Win.src.Presentation.Pages.Authentication.RegisterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client_Holu_Win.src.Presentation.Pages.Authentication"
+      xmlns:controllers="clr-namespace:Client_Holu_Win.src.Presentation.Controllers"
+      mc:Ignorable="d"
+      Title="RegisterPage">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="12*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Register" FontSize="24" FontWeight="Bold" 
+                   Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <TextBlock Padding="20 10 0 10" FontWeight="Bold"> Nombre completo:</TextBlock>
+            <TextBox x:Name="Username" Height="30" VerticalAlignment="Center"/>
+
+            <TextBlock Padding="20 10 0 10" FontWeight="Bold"> Jugador:</TextBlock>
+            <TextBox x:Name="Playername" Height="30" VerticalAlignment="Center"/>
+
+            <TextBlock Padding="20 10 0 10" FontWeight="Bold"> Email:</TextBlock>
+            <TextBox x:Name="Email" Height="30" VerticalAlignment="Center" Typography.CaseSensitiveForms="True"/>
+
+            <TextBlock Padding="20 10 0 10" FontWeight="Bold"> Repetir Password:</TextBlock>
+            <PasswordBox x:Name="PasswordBox" Height="30" VerticalAlignment="Center" />
+
+            <TextBlock Padding="20 10 0 10" FontWeight="Bold"> Password:</TextBlock>
+            <PasswordBox x:Name="PasswordRepeat" Height="30" VerticalAlignment="Center" />
+            
+            <controllers:BtnAccept ButtonText="Register"
+                         ButtonBackground="#ff4512"
+                         ButtonForeground="White"
+                         ButtonClick="BackButton_Click"
+                         ButtonWidth="300"
+                         ButtonHeight="40"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         Padding="0 30 0 0"/>
+
+            <controllers:BtnAccept ButtonText="Back To Login"
+                         ButtonBackground="#ff0412"
+                         ButtonForeground="White"
+                         ButtonClick="BackButton_Click"
+                         ButtonWidth="300"
+                         ButtonHeight="40"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         Padding="00 20 0 0"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,49 @@
+﻿<Page x:Class="Client_Holu_Win.src.Presentation.Pages.Authentication.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client_Holu_Win.src.Presentation.Pages.Authentication"
+      xmlns:controllers="clr-namespace:Client_Holu_Win.src.Presentation.Controllers"
+      mc:Ignorable="d"
+      Title="LoginPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Login" FontSize="24" FontWeight="Bold" 
+                       Grid.Row="0" VerticalAlignment="Bottom" 
+                       HorizontalAlignment="Center" Margin="0,0,0,20" />
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <TextBlock Padding="20 10 0 10" FontWeight="Bold"> Usuario:</TextBlock>
+            <TextBox x:Name="UsernameTextBox" Height="30" VerticalAlignment="Center"/>
+            
+            <TextBlock Padding="20 10 0 10" FontWeight="Bold"> Password:</TextBlock>
+            <PasswordBox x:Name="PasswordBox" Height="30" VerticalAlignment="Center" />
+
+            <controllers:BtnAccept ButtonText="Login"
+                         ButtonBackground="#ff4512"
+                         ButtonForeground="White"
+                         ButtonClick="OnLoginClick"
+                         ButtonWidth="300"
+                         ButtonHeight="40"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         Padding="0 30 0 0"/>
+
+            <controllers:BtnAccept ButtonText="Register"
+                         ButtonBackground="#ff0412"
+                         ButtonForeground="White"
+                         ButtonClick="OnRegisterClick"
+                         ButtonWidth="300"
+                         ButtonHeight="40"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         Padding="00 20 0 0"/>
+        </StackPanel>
+    </Grid>
+</Page>
