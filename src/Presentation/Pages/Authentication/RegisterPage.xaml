@@ -10,8 +10,8 @@
     
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="12*" />
         </Grid.RowDefinitions>
         <TextBlock Text="Register" FontSize="24" FontWeight="Bold" 
                    Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"
@@ -22,22 +22,27 @@
             <StackPanel VerticalAlignment="Top">
 
                 <controllers:InputController InputLabel="Nombre completo:"
+                                         InputIcon="Person"
                                          InputWidth="430"
                                          HorizontalAlignment="Center"/>
 
                 <controllers:InputController InputLabel="Nombre de Jugador:"
+                                         InputIcon="AccountAdd"
                                          InputWidth="430"
                                          HorizontalAlignment="Center"/>
 
                 <controllers:InputController InputLabel="Email:"
+                                         InputIcon="EmailAdd"
                                          InputWidth="430"
                                          HorizontalAlignment="Center"/>
 
-                <controllers:InputController InputLabel="Password:"
+                <controllers:InputPassControl InputLabel="Password:"
+                                         InputIcon="PasswordAdd"
                                          InputWidth="430"
                                          HorizontalAlignment="Center"/>
 
-                <controllers:InputController InputLabel="Repetir password:"
+                <controllers:InputPassControl InputLabel="Repetir password:"
+                                         InputIcon="PasswordReset"
                                          InputWidth="430"
                                          HorizontalAlignment="Center"/>
 

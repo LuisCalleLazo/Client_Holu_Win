@@ -21,11 +21,13 @@
             
             <controllers:InputController InputLabel="Ingrese nombre de usuario:"
                                          InputWidth="430"
-                                         HorizontalAlignment="Center"/>
+                                         InputIcon="Account"
+                                         HorizontalAlignment="Center" />
 
-            <controllers:InputController InputLabel="Ingrese el password:"
+            <controllers:InputPassControl InputLabel="Ingrese el password:"
                                          InputWidth="430"
-                                         HorizontalAlignment="Center"/>
+                                         InputIcon="Password"
+                                         HorizontalAlignment="Center" />
 
             <controllers:BtnAccept ButtonText="Login"
                          ButtonBackground="#ff4512"

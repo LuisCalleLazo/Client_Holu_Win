@@ -35,6 +35,17 @@ namespace Client_Holu_Win.src.Presentation.Controllers
         }
         #endregion
 
+        #region InputIcon (Dependency Property)
+        public static readonly DependencyProperty InputIconProperty = 
+            DependencyProperty.Register("InputIcon", typeof(string), typeof(InputController), new PropertyMetadata(string.Empty));
+
+        public string InputIcon
+        {
+            get { return (string)GetValue(InputIconProperty); }
+            set { SetValue(InputIconProperty, value);}
+        }
+
+        #endregion
 
         #region InputWidth (Dependency Property)
 
