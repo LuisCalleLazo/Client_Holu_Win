@@ -9,8 +9,7 @@
       Title="LoginPage">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="3*" />
+            <RowDefinition Height="100" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -19,11 +18,14 @@
                        HorizontalAlignment="Center" Margin="0,0,0,20" />
 
         <StackPanel Grid.Row="1" VerticalAlignment="Center">
-            <TextBlock Padding="20 10 0 10" FontWeight="Bold"> Usuario:</TextBlock>
-            <TextBox x:Name="UsernameTextBox" Height="30" VerticalAlignment="Center"/>
             
-            <TextBlock Padding="20 10 0 10" FontWeight="Bold"> Password:</TextBlock>
-            <PasswordBox x:Name="PasswordBox" Height="30" VerticalAlignment="Center" />
+            <controllers:InputController InputLabel="Ingrese nombre de usuario:"
+                                         InputWidth="430"
+                                         HorizontalAlignment="Center"/>
+
+            <controllers:InputController InputLabel="Ingrese el password:"
+                                         InputWidth="430"
+                                         HorizontalAlignment="Center"/>
 
             <controllers:BtnAccept ButtonText="Login"
                          ButtonBackground="#ff4512"

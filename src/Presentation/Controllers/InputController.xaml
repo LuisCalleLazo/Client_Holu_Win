@@ -6,7 +6,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:Client_Holu_Win.src.Presentation.Controllers"
              mc:Ignorable="d" 
-             d:DesignHeight="100" d:DesignWidth="400">
+             d:DesignHeight="90" d:DesignWidth="{Binding InputWidth, RelativeSource={RelativeSource AncestorType=UserControl}}">
     <UserControl.Resources>
         <Style x:Key="TextBoxWithIconStyle" TargetType="TextBox">
             <Setter Property="Template">
@@ -30,22 +30,22 @@
             <Setter Property="Padding" Value="10 7 0 6" />
         </Style>
     </UserControl.Resources>
-    <Grid Height="100" Width="400">
+    <Grid Height="90" Width="{Binding InputWidth, RelativeSource={RelativeSource AncestorType=UserControl}}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="40"/>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.ColumnSpan="2">
-            <TextBlock Text="Ingrese nombre de usuario:" 
+            <TextBlock Text="{Binding InputLabel}"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
                        FontSize="15"
-                       Padding="70 10 0 0"
+                       Padding="50 0 0 0"
                        FontWeight="Bold"/>
         </Grid>
         
@@ -53,7 +53,7 @@
             <materialDesign:PackIcon Kind="Account" 
                                      Width="24" 
                                      Height="24" 
-                                     Foreground="DarkSlateBlue" 
+                                     Foreground="#f53405" 
                                      VerticalAlignment="Center"
                                      HorizontalAlignment="Center"/>
         </Grid>
@@ -62,8 +62,7 @@
             <TextBox Style="{StaticResource TextBoxWithIconStyle}"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Left"
-                     Width="300"
-                     Text="Escribre aqui"/>
+                     Width="{Binding InputConWidth, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
         </Grid>
     </Grid>
 </UserControl>

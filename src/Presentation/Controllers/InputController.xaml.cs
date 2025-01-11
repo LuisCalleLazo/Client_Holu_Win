@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,5 +23,54 @@ namespace Client_Holu_Win.src.Presentation.Controllers
             InitializeComponent();
             this.DataContext = this;
         }
+        #region InputLabel (Dependency Property)
+
+        public static readonly DependencyProperty InputLabelProperty =
+            DependencyProperty.Register("InputLabel", typeof(string), typeof(InputController), new PropertyMetadata(string.Empty));
+
+        public string InputLabel
+        {
+            get { return (string)GetValue(InputLabelProperty); }
+            set { SetValue(InputLabelProperty, value); }
+        }
+        #endregion
+
+
+        #region InputWidth (Dependency Property)
+
+        public static readonly DependencyProperty InputWidthProperty =
+            DependencyProperty.Register(
+                "InputWidth", 
+                typeof(double), 
+                typeof(InputController), 
+                new PropertyMetadata(400.0, OnInputWidthChanged)
+            );
+
+        public double InputWidth
+        {
+            get { return (double)GetValue(InputWidthProperty); }
+            set { SetValue(InputWidthProperty, value); }
+        }
+
+        public double InputConWidth => InputWidth - 100;
+
+        private static void OnInputWidthChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var controller = (InputController)d;
+            controller.OnPropertyChanged(nameof(InputConWidth));
+        }
+
+        #endregion
+
+        #region INotifyPropertyChanged
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
     }
 }

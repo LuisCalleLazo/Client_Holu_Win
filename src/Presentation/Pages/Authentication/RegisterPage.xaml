@@ -14,25 +14,34 @@
             <RowDefinition Height="12*" />
         </Grid.RowDefinitions>
         <TextBlock Text="Register" FontSize="24" FontWeight="Bold" 
-                   Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        
-        <StackPanel Grid.Row="1" VerticalAlignment="Center">
-            <TextBlock Padding="20 10 0 10" FontWeight="Bold"> Nombre completo:</TextBlock>
-            <TextBox x:Name="Username" Height="30" VerticalAlignment="Center"/>
+                   Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"
+                   ScrollViewer.VerticalScrollBarVisibility="Visible"/>
 
-            <TextBlock Padding="20 10 0 10" FontWeight="Bold"> Jugador:</TextBlock>
-            <TextBox x:Name="Playername" Height="30" VerticalAlignment="Center"/>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
 
-            <TextBlock Padding="20 10 0 10" FontWeight="Bold"> Email:</TextBlock>
-            <TextBox x:Name="Email" Height="30" VerticalAlignment="Center" Typography.CaseSensitiveForms="True"/>
+            <StackPanel VerticalAlignment="Top">
 
-            <TextBlock Padding="20 10 0 10" FontWeight="Bold"> Repetir Password:</TextBlock>
-            <PasswordBox x:Name="PasswordBox" Height="30" VerticalAlignment="Center" />
+                <controllers:InputController InputLabel="Nombre completo:"
+                                         InputWidth="430"
+                                         HorizontalAlignment="Center"/>
 
-            <TextBlock Padding="20 10 0 10" FontWeight="Bold"> Password:</TextBlock>
-            <PasswordBox x:Name="PasswordRepeat" Height="30" VerticalAlignment="Center" />
-            
-            <controllers:BtnAccept ButtonText="Register"
+                <controllers:InputController InputLabel="Nombre de Jugador:"
+                                         InputWidth="430"
+                                         HorizontalAlignment="Center"/>
+
+                <controllers:InputController InputLabel="Email:"
+                                         InputWidth="430"
+                                         HorizontalAlignment="Center"/>
+
+                <controllers:InputController InputLabel="Password:"
+                                         InputWidth="430"
+                                         HorizontalAlignment="Center"/>
+
+                <controllers:InputController InputLabel="Repetir password:"
+                                         InputWidth="430"
+                                         HorizontalAlignment="Center"/>
+
+                <controllers:BtnAccept ButtonText="Register"
                          ButtonBackground="#ff4512"
                          ButtonForeground="White"
                          ButtonClick="BackButton_Click"
@@ -40,9 +49,9 @@
                          ButtonHeight="40"
                          HorizontalAlignment="Center"
                          VerticalAlignment="Center"
-                         Padding="0 30 0 0"/>
+                         Padding="0 20 0 0"/>
 
-            <controllers:BtnAccept ButtonText="Back To Login"
+                <controllers:BtnAccept ButtonText="Back To Login"
                          ButtonBackground="#ff0412"
                          ButtonForeground="White"
                          ButtonClick="BackButton_Click"
@@ -50,7 +59,8 @@
                          ButtonHeight="40"
                          HorizontalAlignment="Center"
                          VerticalAlignment="Center"
-                         Padding="00 20 0 0"/>
-        </StackPanel>
+                         Padding="0 20 0 20"/>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
