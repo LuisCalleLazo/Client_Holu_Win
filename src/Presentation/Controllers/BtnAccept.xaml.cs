@@ -14,7 +14,6 @@ namespace Client_Holu_Win.src.Presentation.Controllers
         }
         #region ButtonText (Dependency Property)
 
-        // Define las propiedades ButtonText, ButtonBackground, ButtonForeground
         public static readonly DependencyProperty ButtonTextProperty =
             DependencyProperty.Register("ButtonText", typeof(string), typeof(BtnAccept), new PropertyMetadata(string.Empty));
 

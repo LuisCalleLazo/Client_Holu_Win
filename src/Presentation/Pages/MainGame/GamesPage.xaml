@@ -9,8 +9,18 @@
       Title="GamesPage">
 
     <Grid>
-        <TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0">
             LISTA DE JUEGOS
         </TextBlock>
+        
+        <TextBox x:Name="txtOutput"
+                 Grid.Row="1"
+                 TextWrapping="Wrap" 
+                 VerticalScrollBarVisibility="Auto"
+                 IsReadOnly="True"/>
     </Grid>
 </Page>

@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Assets\Icons\" />
+    <Folder Include="Assets\Images\" />
+    <Folder Include="Assets\Fonts\" />
+    <Folder Include="Assets\Styles\" />
     <Folder Include="src\Aplication\DTOs\" />
     <Folder Include="src\Aplication\Interfaces\" />
     <Folder Include="src\Aplication\UseCases\" />
@@ -24,6 +28,7 @@
 
   <ItemGroup>
     <PackageReference Include="DotNetEnv" Version="3.1.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="PacketDotNet" Version="1.4.7" />
     <PackageReference Include="SharpPcap" Version="6.3.0" />

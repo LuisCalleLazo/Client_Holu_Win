@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="Client_Holu_Win.src.Presentation.Controllers.InputController"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Client_Holu_Win.src.Presentation.Controllers"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="400">
+    <UserControl.Resources>
+        <Style x:Key="TextBoxWithIconStyle" TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border CornerRadius="8"
+                                BorderThickness="1"
+                                BorderBrush="#ccc"
+                                Background="White"
+                                Padding="4">
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                          VerticalScrollBarVisibility="Hidden"
+                                          HorizontalScrollBarVisibility="Hidden" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="#333" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Height" Value="45" />
+            <Setter Property="Padding" Value="10 7 0 6" />
+        </Style>
+    </UserControl.Resources>
+    <Grid Height="100" Width="400">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.ColumnSpan="2">
+            <TextBlock Text="Ingrese nombre de usuario:" 
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       FontSize="15"
+                       Padding="70 10 0 0"
+                       FontWeight="Bold"/>
+        </Grid>
+        
+        <Grid Grid.Column="0" Grid.Row="1">
+            <materialDesign:PackIcon Kind="Account" 
+                                     Width="24" 
+                                     Height="24" 
+                                     Foreground="DarkSlateBlue" 
+                                     VerticalAlignment="Center"
+                                     HorizontalAlignment="Center"/>
+        </Grid>
+        
+        <Grid Grid.Column="1" Grid.Row="1">
+            <TextBox Style="{StaticResource TextBoxWithIconStyle}"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Width="300"
+                     Text="Escribre aqui"/>
+        </Grid>
+    </Grid>
+</UserControl>
