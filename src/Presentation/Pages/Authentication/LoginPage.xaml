@@ -7,15 +7,36 @@
       xmlns:controllers="clr-namespace:Client_Holu_Win.src.Presentation.Controllers"
       mc:Ignorable="d"
       Title="LoginPage">
-    <Grid>
+    <Grid Background="#000">
         <Grid.RowDefinitions>
             <RowDefinition Height="100" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Login" FontSize="24" FontWeight="Bold" 
-                       Grid.Row="0" VerticalAlignment="Bottom" 
-                       HorizontalAlignment="Center" Margin="0,0,0,20" />
+        <TextBlock Text="Login"
+                   FontSize="35" 
+                   FontWeight="Bold" 
+                   Grid.Row="0" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,0,140,0"
+                   Foreground="#ff3405" />
+
+        <TextBlock Text="|"
+                   FontSize="100"
+                   Margin="0,0,0,0"
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center"
+                   Foreground="#ff3405" />
+
+        <Image Source="C:\Users\calle\Documents\PROJETS\HOLU\Client_Holu_Win\Assets\Icons\holu.png"
+                       Width="130"
+                       Height="130"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" 
+                       Margin="140,13,0,0"
+                       Stretch="Uniform"/>
+        
 
         <StackPanel Grid.Row="1" VerticalAlignment="Center">
             

@@ -67,7 +67,8 @@
                    HorizontalAlignment="Left"
                    FontSize="13"
                    Padding="50 0 0 0"
-                   FontWeight="Bold"/>
+                   FontWeight="Bold"
+                   Foreground="#ff3405"/>
         </Grid>
 
         <Grid Grid.Column="0" Grid.Row="1">
@@ -107,7 +108,6 @@
                         Cursor="Hand"
                         Click="TogglePasswordVisibility_Click">
                     
-                    <!-- Ícono dentro del botón -->
                     <materialDesign:PackIcon x:Name="ToggleIcon"
                                      Kind="Eye"
                                      Width="24"

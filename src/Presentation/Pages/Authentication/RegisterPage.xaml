@@ -8,14 +8,34 @@
       mc:Ignorable="d"
       Title="RegisterPage">
     
-    <Grid>
+    <Grid Background="#000">
         <Grid.RowDefinitions>
-            <RowDefinition Height="70" />
+            <RowDefinition Height="100" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock Text="Register" FontSize="24" FontWeight="Bold" 
-                   Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"
-                   ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+
+        <TextBlock Text="Register"
+                   FontSize="35" 
+                   FontWeight="Bold" 
+                   Grid.Row="0" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,0,190,0"
+                   Foreground="#ff3405" />
+
+        <TextBlock Text="|"
+                   FontSize="100"
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center"
+                   Foreground="#ff3405" />
+
+        <Image Source="C:\Users\calle\Documents\PROJETS\HOLU\Client_Holu_Win\Assets\Icons\holu.png"
+                       Width="130"
+                       Height="130"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" 
+                       Margin="150,13,0,0"
+                       Stretch="Uniform"/>
 
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
 

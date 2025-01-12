@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Client_Holu_Win.src.Presentation.Views"
         mc:Ignorable="d"
         Title="Authentication" Height="550" Width="400"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
 
     <Grid>
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
