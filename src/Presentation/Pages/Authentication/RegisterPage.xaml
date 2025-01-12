@@ -8,34 +8,38 @@
       mc:Ignorable="d"
       Title="RegisterPage">
     
-    <Grid Background="#000">
+    <Grid >
         <Grid.RowDefinitions>
-            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Register"
+        <Grid Margin="0 0 0 25">
+            <TextBlock Text="Register"
                    FontSize="35" 
                    FontWeight="Bold" 
                    Grid.Row="0" 
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center" 
                    Margin="0,0,190,0"
-                   Foreground="#ff3405" />
+                   Foreground="#0C6BF9" />
 
-        <TextBlock Text="|"
-                   FontSize="100"
+            <TextBlock Text="|"
+                   FontSize="70"
+                   FontWeight="Bold"
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center"
-                   Foreground="#ff3405" />
+                   Foreground="#0C6BF9" />
 
-        <Image Source="C:\Users\calle\Documents\PROJETS\HOLU\Client_Holu_Win\Assets\Icons\holu.png"
+            <Image Source="C:\Users\calle\Documents\PROJETS\HOLU\Client_Holu_Win\Assets\Icons\holu.png"
                        Width="130"
                        Height="130"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center" 
                        Margin="150,13,0,0"
                        Stretch="Uniform"/>
+        </Grid>
 
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
 
@@ -65,27 +69,29 @@
                                          InputIcon="PasswordReset"
                                          InputWidth="430"
                                          HorizontalAlignment="Center"/>
-
-                <controllers:BtnAccept ButtonText="Register"
-                         ButtonBackground="#ff4512"
-                         ButtonForeground="White"
-                         ButtonClick="BackButton_Click"
-                         ButtonWidth="300"
-                         ButtonHeight="40"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
-                         Padding="0 20 0 0"/>
-
-                <controllers:BtnAccept ButtonText="Back To Login"
-                         ButtonBackground="#ff0412"
-                         ButtonForeground="White"
-                         ButtonClick="BackButton_Click"
-                         ButtonWidth="300"
-                         ButtonHeight="40"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
-                         Padding="0 20 0 20"/>
             </StackPanel>
         </ScrollViewer>
+
+        <StackPanel VerticalAlignment="Center" Grid.Row="2">
+            <controllers:BtnAccept ButtonText="Register"
+             ButtonBackground="#0C6BF9"
+             ButtonForeground="White"
+             ButtonClick="BackButton_Click"
+             ButtonWidth="300"
+             ButtonHeight="40"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center"
+             Padding="0 20 0 0"/>
+
+            <controllers:BtnAccept ButtonText="Back To Login"
+                                 ButtonBackground="#0C23A9"
+                                 ButtonForeground="White"
+                                 ButtonClick="BackButton_Click"
+                                 ButtonWidth="300"
+                                 ButtonHeight="40"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 Padding="0 20 0 20"/>
+        </StackPanel>
     </Grid>
 </Page>

@@ -3,12 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controllers="clr-namespace:Client_Holu_Win.src.Presentation.Controllers"
         xmlns:local="clr-namespace:Client_Holu_Win"
         mc:Ignorable="d"
         Title="MainWindow"
         WindowState="Maximized">
 
-    <Grid>
+    <Grid Background="#000">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="*"/>
@@ -21,21 +22,110 @@
         </Grid.RowDefinitions>
 
         <!-- Panel de Navegación -->
-        <StackPanel Background="#2D2D30" Grid.Column="0" VerticalAlignment="Stretch" Grid.RowSpan="2">
-            <TextBlock Text="HOLU" Foreground="White" FontSize="20" FontWeight="Bold" 
-                       Margin="0 40" HorizontalAlignment="Center"/>
-            <Button Content="Lista de Partidas" Width="250" Height="40" 
-                    HorizontalAlignment="Center" Click="NavGamesPage"/>
-            <Button Content="Estadisticas" Width="250" Height="40" 
-                    HorizontalAlignment="Center" Click="NavStatisticsPage"/>
-            <Button Content="Historial" Width="250" Height="40" 
-                    HorizontalAlignment="Center" Click="NavHistoryPage"/>
-            <Button Content="Perfil" Width="250" Height="40" 
-                    HorizontalAlignment="Center" Click="NavProfilePage"/>
-            <Button Content="Foros" Width="250" Height="40" 
-                    HorizontalAlignment="Center" Click="NavForumsPage"/>
-        </StackPanel>
+        <Grid Grid.Column="0" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
 
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Source="C:\Users\calle\Documents\PROJETS\HOLU\Client_Holu_Win\Assets\Icons\holu.png"
+                       Width="200"
+                       Height="200"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" 
+                       Stretch="Uniform"
+                       Grid.Row="0"/>
+
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
+
+                    <StackPanel VerticalAlignment="Stretch">
+                        <controllers:NavItemControl NavText="Perfil de jugador"
+                                 NavBackground="#0C6BF9"
+                                 NavClick="NavProfilePage"
+                                 NavHeight="50"
+                                 NavWidth="250"
+                                 NavIcon="AccountBoxes"
+                                 Margin="0 0 0 5"/>
+
+                        <controllers:NavItemControl NavText="Lista de partidas"
+                                 NavBackground="#0C6BF9"
+                                 NavClick="NavGamesPage"
+                                 NavHeight="50"
+                                 NavWidth="250"
+                                 NavIcon="FormatListGroup"
+                                 Margin="0 0 0 5"/>
+
+                        <controllers:NavItemControl NavText="Estadisticas"
+                                 NavBackground="#0C6BF9"
+                                 NavClick="NavStatisticsPage"
+                                 NavHeight="50"
+                                 NavWidth="250"
+                                 NavIcon="ChartBar"
+                                 Margin="0 0 0 5"/>
+
+                        <controllers:NavItemControl NavText="Historial"
+                                 NavBackground="#0C6BF9"
+                                 NavClick="NavHistoryPage"
+                                 NavHeight="50"
+                                 NavWidth="250"
+                                 NavIcon="History"
+                                 Margin="0 0 0 5"/>
+
+                        <controllers:NavItemControl NavText="Foros"
+                                 NavBackground="#0C6BF9"
+                                 NavClick="NavForumsPage"
+                                 NavHeight="50"
+                                 NavWidth="250"
+                                 NavIcon="ForumSubtract"
+                                 Margin="0 0 0 5"/>
+
+                        <controllers:NavItemControl NavText="Grupos"
+                                 NavBackground="#0C6BF9"
+                                 NavClick="NavForumsPage"
+                                 NavHeight="50"
+                                 NavWidth="250"
+                                 NavIcon="Group"
+                                 Margin="0 0 0 5"/>
+
+                        <controllers:NavItemControl NavText="Configuraciones"
+                                 NavBackground="#0C6BF9"
+                                 NavClick="NavForumsPage"
+                                 NavHeight="50"
+                                 NavWidth="250"
+                                 NavIcon="Settings"
+                                 Margin="0 0 0 5"/>
+
+                        <controllers:NavItemControl NavText="Ayuda"
+                                 NavBackground="#0C6BF9"
+                                 NavClick="NavForumsPage"
+                                 NavHeight="50"
+                                 NavWidth="250"
+                                 NavIcon="Help"
+                                 Margin="0 0 0 5"/>
+
+                    </StackPanel>
+                </ScrollViewer>
+
+
+            </Grid>
+            <Grid Grid.Row="1">
+                <controllers:NavItemControl NavText="Cerrar Session"
+                                 NavBackground="#f43412"
+                                 NavClick="CloseSession"
+                                 NavHeight="50"
+                                 NavWidth="250"
+                                 NavIcon="ExitToApp"
+                                 Margin="0 0 0 5"/>
+            </Grid>
+            
+        </Grid>
+       
         <!-- Contenido Principal -->
         <Grid Grid.Column="1" Grid.RowSpan="2">
             <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>

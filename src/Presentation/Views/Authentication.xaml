@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client_Holu_Win.src.Presentation.Views"
         mc:Ignorable="d"
-        Title="Authentication" Height="550" Width="400"
+        Title="Authentication" Height="700" Width="400"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
 
-    <Grid>
+    <Grid Background="#000" >
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>

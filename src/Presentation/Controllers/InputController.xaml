@@ -47,14 +47,14 @@
                        FontSize="13"
                        Padding="50 0 0 0"
                        FontWeight="Bold"
-                       Foreground="#ff3405"/>
+                       Foreground="#0C6BF9"/>
         </Grid>
         
         <Grid Grid.Column="0" Grid.Row="1">
             <materialDesign:PackIcon Kind="{Binding InputIcon}" 
                                      Width="24" 
                                      Height="24" 
-                                     Foreground="#f53405" 
+                                     Foreground="#0C6BF9" 
                                      VerticalAlignment="Center"
                                      HorizontalAlignment="Center"/>
         </Grid>

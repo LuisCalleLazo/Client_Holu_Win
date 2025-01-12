@@ -1,4 +1,5 @@
 ﻿using Client_Holu_Win.src.Presentation.Pages.MainGame;
+using Client_Holu_Win.src.Presentation.Views;
 using System.Windows;
 
 namespace Client_Holu_Win;
@@ -35,5 +36,15 @@ public partial class MainWindow : Window
     private void NavStatisticsPage(object sender, RoutedEventArgs e)
     {
         MainFrame.Navigate(new StatisticsPage(MainFrame));
+    }
+    private void CloseSession(object sender, RoutedEventArgs e)
+    {
+        var currentWindow = GetWindow(this);
+        var authWindow = new Authentication();
+
+        Application.Current.MainWindow = authWindow;
+        authWindow.Show();
+
+        currentWindow?.Close();
     }
 }

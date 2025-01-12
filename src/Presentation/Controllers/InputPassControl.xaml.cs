@@ -29,8 +29,7 @@ namespace Client_Holu_Win.src.Presentation.Controllers
         public static readonly DependencyProperty InputLabelProperty =
             DependencyProperty.Register("InputLabel", typeof(string), 
                 typeof(InputPassControl), 
-                new PropertyMetadata(string.Empty)
-                );
+                new PropertyMetadata(string.Empty));
 
         public string InputLabel
         {
@@ -41,7 +40,10 @@ namespace Client_Holu_Win.src.Presentation.Controllers
 
         #region InputIcon (Dependency Property)
         public static readonly DependencyProperty InputIconProperty =
-            DependencyProperty.Register("InputIcon", typeof(string), typeof(InputPassControl), new PropertyMetadata(string.Empty));
+            DependencyProperty.Register("InputIcon", 
+                typeof(string), 
+                typeof(InputPassControl), 
+                new PropertyMetadata(string.Empty));
 
         public string InputIcon
         {

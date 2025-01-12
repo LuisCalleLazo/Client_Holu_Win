@@ -9,7 +9,7 @@
       Title="ProfilePage">
 
     <Grid>
-        <TextBlock>
+        <TextBlock Foreground="Wheat">
             PERFIL DE JUGADOR
         </TextBlock>
     </Grid>

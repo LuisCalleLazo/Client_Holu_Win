@@ -7,35 +7,40 @@
       xmlns:controllers="clr-namespace:Client_Holu_Win.src.Presentation.Controllers"
       mc:Ignorable="d"
       Title="LoginPage">
-    <Grid Background="#000">
+    <Grid VerticalAlignment="Center">
         <Grid.RowDefinitions>
-            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Login"
+        <Grid Margin="0 0 0 50">
+
+            <TextBlock Text="Login"
                    FontSize="35" 
                    FontWeight="Bold" 
                    Grid.Row="0" 
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center" 
                    Margin="0,0,140,0"
-                   Foreground="#ff3405" />
+                   Foreground="#0C6BF9" />
 
-        <TextBlock Text="|"
-                   FontSize="100"
+            <TextBlock Text="|"
+                   FontSize="70"
                    Margin="0,0,0,0"
+                       FontWeight="Bold"
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center"
-                   Foreground="#ff3405" />
+                   Foreground="#0C6BF9" />
 
-        <Image Source="C:\Users\calle\Documents\PROJETS\HOLU\Client_Holu_Win\Assets\Icons\holu.png"
+            <Image Source="C:\Users\calle\Documents\PROJETS\HOLU\Client_Holu_Win\Assets\Icons\holu.png"
                        Width="130"
                        Height="130"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center" 
-                       Margin="140,13,0,0"
+                       Margin="150,13,0,0"
                        Stretch="Uniform"/>
+        </Grid>
         
 
         <StackPanel Grid.Row="1" VerticalAlignment="Center">
@@ -50,8 +55,13 @@
                                          InputIcon="Password"
                                          HorizontalAlignment="Center" />
 
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2" VerticalAlignment="Center" Margin="0 50 0 0">
+
+
             <controllers:BtnAccept ButtonText="Login"
-                         ButtonBackground="#ff4512"
+                         ButtonBackground="#0C6BF9"
                          ButtonForeground="White"
                          ButtonClick="OnLoginClick"
                          ButtonWidth="300"
@@ -61,7 +71,7 @@
                          Padding="0 30 0 0"/>
 
             <controllers:BtnAccept ButtonText="Register"
-                         ButtonBackground="#ff0412"
+                         ButtonBackground="#0C23A9"
                          ButtonForeground="White"
                          ButtonClick="OnRegisterClick"
                          ButtonWidth="300"
