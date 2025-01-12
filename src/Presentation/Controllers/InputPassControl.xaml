@@ -29,6 +29,27 @@
             <Setter Property="Height" Value="45" />
             <Setter Property="Padding" Value="10 7 0 6" />
         </Style>
+        <Style x:Key="InPassBoxWithIconStyle" TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border CornerRadius="8"
+                    BorderThickness="1"
+                    BorderBrush="#ccc"
+                    Background="White"
+                    Padding="4">
+                            <ScrollViewer x:Name="PART_ContentHost"
+                              VerticalScrollBarVisibility="Hidden"
+                              HorizontalScrollBarVisibility="Hidden" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="#333" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Height" Value="45" />
+            <Setter Property="Padding" Value="10 7 0 6" />
+        </Style>
     </UserControl.Resources>
     <Grid Height="90" Width="{Binding InputWidth, RelativeSource={RelativeSource AncestorType=UserControl}}">
         <Grid.ColumnDefinitions>
@@ -61,10 +82,38 @@
         <Grid Grid.Column="1" Grid.Row="1">
             <Grid>
                 <PasswordBox Style="{StaticResource PassBoxWithIconStyle}"
-                 VerticalAlignment="Center"
-                 HorizontalAlignment="Left"
-                 Visibility="Visible"
-                 Width="{Binding InputConWidth, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+                             x:Name="PasswordBox"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Left"
+                             Visibility="Visible"
+                             Width="{Binding InputConWidth, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                             />
+
+                <TextBox x:Name="PasswordTextBox"
+                         Style="{StaticResource InPassBoxWithIconStyle}"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Left"
+                         Width="{Binding InputConWidth, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                         Visibility="Collapsed"
+                         TextChanged="PasswordTextBox_TextChanged" />
+                
+                <Button Width="30" 
+                        Height="30"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,70,0"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Cursor="Hand"
+                        Click="TogglePasswordVisibility_Click">
+                    
+                    <!-- Ícono dentro del botón -->
+                    <materialDesign:PackIcon x:Name="ToggleIcon"
+                                     Kind="Eye"
+                                     Width="24"
+                                     Height="24"
+                                     Foreground="#f53405" />
+                </Button>
             </Grid>
         </Grid>
     </Grid>

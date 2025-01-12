@@ -89,42 +89,40 @@ namespace Client_Holu_Win.src.Presentation.Controllers
 
         #endregion
 
+        private void TogglePasswordVisibility_Click(object sender, RoutedEventArgs e)
+        {
+            if (PasswordBox.Visibility == Visibility.Visible)
+            {
+                PasswordTextBox.Text = PasswordBox.Password;
+                PasswordBox.Visibility = Visibility.Collapsed;
+                PasswordTextBox.Visibility = Visibility.Visible;
 
-        //private void TogglePasswordVisibility_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (PasswordBox.Visibility == Visibility.Visible)
-        //    {
-        //        // Mostrar el texto en el TextBox y ocultar el PasswordBox
-        //        PasswordTextBox.Text = PasswordBox.Password;
-        //        PasswordTextBox.Visibility = Visibility.Visible;
-        //        PasswordBox.Visibility = Visibility.Collapsed;
-        //    }
-        //    else
-        //    {
-        //        // Ocultar el TextBox y mostrar el PasswordBox
-        //        PasswordBox.Password = PasswordTextBox.Text;
-        //        PasswordBox.Visibility = Visibility.Visible;
-        //        PasswordTextBox.Visibility = Visibility.Collapsed;
-        //    }
-        //}
+                ToggleIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.EyeOff;
+            }
+            else
+            {
+                PasswordBox.Password = PasswordTextBox.Text;
+                PasswordBox.Visibility = Visibility.Visible;
+                PasswordTextBox.Visibility = Visibility.Collapsed;
 
-        //private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
-        //{
-        //    // Sincronizar el texto con el TextBox
-        //    if (PasswordBox.Visibility == Visibility.Visible)
-        //    {
-        //        PasswordTextBox.Text = PasswordBox.Password;
-        //    }
-        //}
+                ToggleIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Eye;
+            }
+        }
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (PasswordBox.Visibility == Visibility.Visible)
+            {
+                PasswordTextBox.Text = PasswordBox.Password;
+            }
+        }
 
-        //private void PasswordTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-        //    // Sincronizar el texto con el PasswordBox
-        //    if (PasswordTextBox.Visibility == Visibility.Visible)
-        //    {
-        //        PasswordBox.Password = PasswordTextBox.Text;
-        //    }
-        //}
+        private void PasswordTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (PasswordTextBox.Visibility == Visibility.Visible)
+            {
+                PasswordBox.Password = PasswordTextBox.Text;
+            }
+        }
 
     }
 }
