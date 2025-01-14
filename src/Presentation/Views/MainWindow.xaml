@@ -51,15 +51,15 @@
                                  NavHeight="50"
                                  NavWidth="250"
                                  NavIcon="AccountBoxes"
-                                 Margin="0 0 0 5"/>
+                                 Margin="0 0 0 0"/>
 
-                        <controllers:NavItemControl NavText="Lista de partidas"
+                        <controllers:NavItemControl NavText="Videojuegos"
                                  NavBackground="#0C6BF9"
                                  NavClick="NavGamesPage"
                                  NavHeight="50"
                                  NavWidth="250"
-                                 NavIcon="FormatListGroup"
-                                 Margin="0 0 0 5"/>
+                                 NavIcon="GamepadClassic"
+                                 Margin="0 0 0 0"/>
 
                         <controllers:NavItemControl NavText="Estadisticas"
                                  NavBackground="#0C6BF9"
@@ -67,7 +67,7 @@
                                  NavHeight="50"
                                  NavWidth="250"
                                  NavIcon="ChartBar"
-                                 Margin="0 0 0 5"/>
+                                 Margin="0 0 0 0"/>
 
                         <controllers:NavItemControl NavText="Historial"
                                  NavBackground="#0C6BF9"
@@ -75,7 +75,7 @@
                                  NavHeight="50"
                                  NavWidth="250"
                                  NavIcon="History"
-                                 Margin="0 0 0 5"/>
+                                 Margin="0 0 0 0"/>
 
                         <controllers:NavItemControl NavText="Foros"
                                  NavBackground="#0C6BF9"
@@ -83,7 +83,7 @@
                                  NavHeight="50"
                                  NavWidth="250"
                                  NavIcon="ForumSubtract"
-                                 Margin="0 0 0 5"/>
+                                 Margin="0 0 0 0"/>
 
                         <controllers:NavItemControl NavText="Grupos"
                                  NavBackground="#0C6BF9"
@@ -91,7 +91,7 @@
                                  NavHeight="50"
                                  NavWidth="250"
                                  NavIcon="Group"
-                                 Margin="0 0 0 5"/>
+                                 Margin="0 0 0 0"/>
 
                         <controllers:NavItemControl NavText="Configuraciones"
                                  NavBackground="#0C6BF9"
@@ -99,7 +99,7 @@
                                  NavHeight="50"
                                  NavWidth="250"
                                  NavIcon="Settings"
-                                 Margin="0 0 0 5"/>
+                                 Margin="0 0 0 0"/>
 
                         <controllers:NavItemControl NavText="Ayuda"
                                  NavBackground="#0C6BF9"
@@ -107,7 +107,7 @@
                                  NavHeight="50"
                                  NavWidth="250"
                                  NavIcon="Help"
-                                 Margin="0 0 0 5"/>
+                                 Margin="0 0 0 0"/>
 
                     </StackPanel>
                 </ScrollViewer>

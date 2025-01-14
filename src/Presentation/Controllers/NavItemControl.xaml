@@ -24,7 +24,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border x:Name="btnBorder"
-                             CornerRadius="0 0 30 10"
+                             CornerRadius="20 0 30 0"
                              Width="{TemplateBinding Width}"
                              MaxHeight="{TemplateBinding MaxHeight}"
                              Background="{Binding NavBackground}"
