@@ -4,19 +4,25 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Client_Holu_Win.src.Presentation.Pages.MainGame"
+      xmlns:controllers="clr-namespace:Client_Holu_Win.src.Presentation.Controllers"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="GamesPage">
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="110"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Foreground="Wheat">
-            LISTA DE JUEGOS
-        </TextBlock>
-        <TextBlock x:Name="PacketInfoTextBlock" 
+        
+        <Grid Grid.Row="0">
+            <controllers:TitleControl Text="Juegos disponibles"
+                                      VerticalAlignment="Center"
+                                      HorizontalAlignment="Center"/>
+        </Grid>
+        
+        <Grid Grid.Row="1">
+            <TextBlock x:Name="PacketInfoTextBlock" 
                    VerticalAlignment="Top" 
                    HorizontalAlignment="Left" 
                    Margin="10 40 10 10" 
@@ -24,5 +30,6 @@
                    Width="600" 
                    Foreground="Wheat"
                    Height="400"/>
+        </Grid>
     </Grid>
 </Page>

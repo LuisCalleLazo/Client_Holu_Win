@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:controllers="clr-namespace:Client_Holu_Win.src.Presentation.Controllers"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Client_Holu_Win"
         mc:Ignorable="d"
         Title="MainWindow"
@@ -17,7 +18,7 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -95,7 +96,7 @@
 
                         <controllers:NavItemControl NavText="Configuraciones"
                                  NavBackground="#0C6BF9"
-                                 NavClick="NavForumsPage"
+                                 NavClick="SettingsPage"
                                  NavHeight="50"
                                  NavWidth="250"
                                  NavIcon="Settings"
@@ -129,6 +130,22 @@
         <!-- Contenido Principal -->
         <Grid Grid.Column="1" Grid.RowSpan="2">
             <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        </Grid>
+
+
+        <!-- Barra lateral -->
+        <Grid Grid.Column="2">
+            <materialDesign:PackIcon x:Name="OnlineCircle"
+                                     Kind="Circle"
+                                     Width="20"
+                                     Height="20"
+                                     Foreground="#2aff00"
+                                     VerticalAlignment="Center"
+                                     HorizontalAlignment="Center"/>
+            <TextBlock Text="Online" 
+                       Foreground="#2aff00" 
+                       VerticalAlignment="Bottom"
+                       HorizontalAlignment="Center"/>
         </Grid>
     </Grid>
 </Window>

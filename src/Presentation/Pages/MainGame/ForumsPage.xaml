@@ -10,11 +10,17 @@
       Title="ForumsPage">
 
     <Grid>
-        <TextBlock>
-            FOROS
-        </TextBlock>
-        
-        <controllers:InputController InputLabel="Ingresa usuario:" 
-                                     InputWidth="450"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0">
+            <controllers:TitleControl Text="Foros"
+                                      VerticalAlignment="Center"
+                                      HorizontalAlignment="Center"/>
+        </Grid>
+
     </Grid>
 </Page>

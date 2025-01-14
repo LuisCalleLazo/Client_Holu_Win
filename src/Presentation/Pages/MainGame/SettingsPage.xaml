@@ -1,0 +1,84 @@
+﻿<Page x:Class="Client_Holu_Win.src.Presentation.Pages.MainGame.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client_Holu_Win.src.Presentation.Pages.MainGame"
+      xmlns:controllers="clr-namespace:Client_Holu_Win.src.Presentation.Controllers"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SettingsPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <controllers:TitleControl Text="Configuraciones"
+                                      VerticalAlignment="Center"
+                                      HorizontalAlignment="Center"/>
+        </Grid>
+
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Grid Grid.Column="0">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                    <StackPanel>
+                        <controllers:InputController InputLabel="Puerto de Warcraft"
+                                                     InputIcon="UsbCPort"
+                                                     InputWidth="500"/>
+                        
+                        <controllers:InputController InputLabel="Ubicacion de .exe Warcraft III"
+                                                     InputIcon="Folder"
+                                                     InputWidth="500"/>
+
+                        <controllers:InputController InputLabel="Puerto de Warcraft"
+                                                     InputIcon="Gamepad"
+                                                     InputWidth="500"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+
+
+            <Grid Grid.Column="1">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                    <StackPanel>
+                        <controllers:InputController InputLabel="Region (mejor latencia si es cerca de tu proximidad)"
+                                                     InputIcon="Earth"
+                                                     InputWidth="500"/>
+
+                        <controllers:InputController InputLabel="Numero de Cuenta de deposito"
+                                                     InputIcon="CreditCardMarker"
+                                                     InputWidth="500"/>
+
+                        <controllers:InputController InputLabel="Metodo de pago"
+                                                     InputIcon="CreditCard"
+                                                     InputWidth="500"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="2">
+
+            <controllers:BtnAccept ButtonText="Guardar cambios"
+                         ButtonBackground="#0C6BF9"
+                         ButtonForeground="White"
+                         ButtonClick="SaveChangesClick"
+                         ButtonWidth="250"
+                         ButtonHeight="50"
+                         HorizontalAlignment="Right"
+                         VerticalAlignment="Center"
+                         Padding="0 0 0 0"/>
+        </Grid>
+    </Grid>
+</Page>

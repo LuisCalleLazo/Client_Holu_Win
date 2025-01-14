@@ -37,6 +37,11 @@ public partial class MainWindow : Window
     {
         MainFrame.Navigate(new StatisticsPage(MainFrame));
     }
+
+    private void SettingsPage(object sender, RoutedEventArgs e)
+    {
+        MainFrame.Navigate(new SettingsPage(MainFrame));
+    }
     private void CloseSession(object sender, RoutedEventArgs e)
     {
         var currentWindow = GetWindow(this);
