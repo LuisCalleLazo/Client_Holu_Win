@@ -21,7 +21,109 @@
                                       HorizontalAlignment="Center"/>
         </Grid>
         <Grid Grid.Row="1">
-            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="600"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid>
+                        <Ellipse Width="200" 
+                                 Height="200" 
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 Fill="LightGray" />
+                        
+                        <Ellipse Width="200" 
+                                 Height="200" 
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="C:\Users\calle\Documents\PROJETS\HOLU\Client_Holu_Win\Assets\Icons\holu.png"
+                                            Stretch="Uniform" />
+                                
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <controllers:InputFileControl InputLabel="Selecciona una image"
+                                                  InputIcon="Image"
+                                                  InputWidth="430"/>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Opcion1" 
+                               Foreground="Bisque" />
+                        <TextBlock Text="Opcion1" 
+                               Foreground="Bisque" />
+                        <TextBlock Text="Opcion1" 
+                               Foreground="Bisque" />
+                        <TextBlock Text="Opcion1" 
+                               Foreground="Bisque" />
+                        <TextBlock Text="Opcion1" 
+                               Foreground="Bisque" />
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                        <StackPanel VerticalAlignment="Stretch">
+                            
+                            <controllers:InputController InputLabel="Nombre completo:"
+                                                         InputIcon="Account"
+                                                         InputWidth="500"/>
+                            
+                            <controllers:InputController InputLabel="Nombre de jugador:"
+                                                         InputIcon="Account"
+                                                         InputWidth="500"/>
+
+                            <controllers:InputController InputLabel="Pais:"
+                                                         InputIcon="Account"
+                                                         InputWidth="500"/>
+
+                            <controllers:InputController InputLabel="Nombre completo:"
+                                                         InputIcon="Account"
+                                                         InputWidth="500"/>
+
+                            <controllers:InputController InputLabel="Nombre completo:"
+                                                         InputIcon="Account"
+                                                         InputWidth="500"/>
+
+                            <controllers:InputController InputLabel="Nombre completo:"
+                                                         InputIcon="Account"
+                                                         InputWidth="500"/>
+
+                            <controllers:InputController InputLabel="Nombre completo:"
+                                                         InputIcon="Account"
+                                                         InputWidth="500"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <controllers:BtnAccept ButtonText="Guardar cambios"
+                                           ButtonWidth="230"
+                                           HorizontalAlignment="Right"
+                                           ButtonBackground="#0C6BF9"/>
+                </Grid>
+            </Grid>
         </Grid>
     </Grid>
 </Page>
